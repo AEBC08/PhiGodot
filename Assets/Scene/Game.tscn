@@ -1,0 +1,139 @@
+[gd_scene load_steps=8 format=3 uid="uid://dplevybj8qnbv"]
+
+[ext_resource type="Script" path="res://Assets/Script/Game_Logic.cs" id="1_tgsq7"]
+[ext_resource type="FontFile" uid="uid://c8668gfxciipd" path="res://Assets/Font/Phigros.ttf" id="1_vlqfs"]
+[ext_resource type="AudioStream" uid="uid://djgjr220x0tnl" path="res://Assets/Audio/Effects/Tap_or_Hold.wav" id="2_clytu"]
+[ext_resource type="Texture2D" uid="uid://bjka5qa0v58p6" path="res://Assets/Image/Materials/Suspend_Shrink.png" id="2_sva1u"]
+[ext_resource type="AudioStream" uid="uid://bfu6ni4pbrqbh" path="res://Assets/Audio/Effects/Drag.wav" id="3_lavxw"]
+[ext_resource type="Script" path="res://Assets/Script/Suspend.cs" id="4_3hjki"]
+[ext_resource type="AudioStream" uid="uid://cebrxja6gc661" path="res://Assets/Audio/Effects/Flick.wav" id="4_wm3aq"]
+
+[node name="Game" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tgsq7")
+
+[node name="Backgroun" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Game" type="Node2D" parent="Backgroun"]
+
+[node name="Music" type="AudioStreamPlayer" parent="Backgroun/Game"]
+
+[node name="Tap_or_Hold" type="AudioStreamPlayer" parent="Backgroun/Game"]
+stream = ExtResource("2_clytu")
+
+[node name="Drag" type="AudioStreamPlayer" parent="Backgroun/Game"]
+stream = ExtResource("3_lavxw")
+
+[node name="Flick" type="AudioStreamPlayer" parent="Backgroun/Game"]
+stream = ExtResource("4_wm3aq")
+
+[node name="UI" type="MarginContainer" parent="Backgroun"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="UI_Down" type="VBoxContainer" parent="Backgroun/UI"]
+layout_mode = 2
+alignment = 2
+
+[node name="UI_Down" type="MarginContainer" parent="Backgroun/UI/UI_Down"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="UI_Right" type="HBoxContainer" parent="Backgroun/UI/UI_Down/UI_Down"]
+layout_mode = 2
+alignment = 2
+
+[node name="UI_Down" type="VBoxContainer" parent="Backgroun/UI/UI_Down/UI_Down/UI_Right"]
+layout_mode = 2
+alignment = 2
+
+[node name="Difficulty" type="Label" parent="Backgroun/UI/UI_Down/UI_Down/UI_Right/UI_Down"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_vlqfs")
+theme_override_font_sizes/font_size = 20
+horizontal_alignment = 2
+
+[node name="UI_Left" type="HBoxContainer" parent="Backgroun/UI/UI_Down/UI_Down"]
+layout_mode = 2
+
+[node name="UI_Down" type="VBoxContainer" parent="Backgroun/UI/UI_Down/UI_Down/UI_Left"]
+layout_mode = 2
+
+[node name="Song" type="Label" parent="Backgroun/UI/UI_Down/UI_Down/UI_Left/UI_Down"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_vlqfs")
+theme_override_font_sizes/font_size = 20
+
+[node name="UI_Up" type="VBoxContainer" parent="Backgroun/UI"]
+layout_mode = 2
+
+[node name="Progress" type="ProgressBar" parent="Backgroun/UI/UI_Up"]
+layout_mode = 2
+value = 25.0
+show_percentage = false
+
+[node name="UI_Up" type="MarginContainer" parent="Backgroun/UI/UI_Up"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_right = 10
+
+[node name="UI_Right" type="HBoxContainer" parent="Backgroun/UI/UI_Up/UI_Up"]
+layout_mode = 2
+alignment = 2
+
+[node name="UI_Up" type="VBoxContainer" parent="Backgroun/UI/UI_Up/UI_Up/UI_Right"]
+layout_mode = 2
+
+[node name="Points" type="Label" parent="Backgroun/UI/UI_Up/UI_Up/UI_Right/UI_Up"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_vlqfs")
+theme_override_font_sizes/font_size = 25
+horizontal_alignment = 2
+
+[node name="UI_Middle" type="HBoxContainer" parent="Backgroun/UI/UI_Up/UI_Up"]
+layout_mode = 2
+alignment = 1
+
+[node name="UI_Up" type="VBoxContainer" parent="Backgroun/UI/UI_Up/UI_Up/UI_Middle"]
+layout_mode = 2
+theme_override_constants/separation = -5
+
+[node name="Combo" type="Label" parent="Backgroun/UI/UI_Up/UI_Up/UI_Middle/UI_Up"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_vlqfs")
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+
+[node name="Mode" type="Label" parent="Backgroun/UI/UI_Up/UI_Up/UI_Middle/UI_Up"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_vlqfs")
+theme_override_font_sizes/font_size = 20
+horizontal_alignment = 1
+
+[node name="UI_Left" type="HBoxContainer" parent="Backgroun/UI/UI_Up/UI_Up"]
+layout_mode = 2
+
+[node name="UI_Up" type="VBoxContainer" parent="Backgroun/UI/UI_Up/UI_Up/UI_Left"]
+layout_mode = 2
+
+[node name="Suspend" type="TextureButton" parent="Backgroun/UI/UI_Up/UI_Up/UI_Left/UI_Up"]
+layout_mode = 2
+texture_normal = ExtResource("2_sva1u")
+script = ExtResource("4_3hjki")

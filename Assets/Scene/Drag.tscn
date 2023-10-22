@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://cusnrw3t5w33s"]
+
+[ext_resource type="Texture2D" uid="uid://mcyvk8q2gfye" path="res://Assets/Image/Materials/Drag.png" id="1_v4q2d"]
+[ext_resource type="Script" path="res://Assets/Script/Drag.cs" id="2_adtiw"]
+[ext_resource type="PackedScene" uid="uid://tla4ta022aiv" path="res://Assets/Scene/Animation.tscn" id="3_wfh1q"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0hxk7"]
+size = Vector2(986.667, 66.6667)
+
+[node name="Drag" type="Sprite2D" node_paths=PackedStringArray("Collision")]
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("1_v4q2d")
+script = ExtResource("2_adtiw")
+Collision = NodePath("Drag")
+Animation = ExtResource("3_wfh1q")
+
+[node name="Drag" type="Area2D" parent="."]
+
+[node name="Drag" type="CollisionShape2D" parent="Drag"]
+position = Vector2(-2.54313e-05, -7.94729e-07)
+shape = SubResource("RectangleShape2D_0hxk7")

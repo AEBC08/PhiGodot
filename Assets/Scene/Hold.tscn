@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dxh0n16s712du"]
+
+[ext_resource type="Texture2D" uid="uid://cbwdcybd0t1v8" path="res://Assets/Image/Materials/Hold.png" id="1_w27pp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j2o8c"]
+size = Vector2(986.667, 2000)
+
+[node name="Hold" type="Sprite2D"]
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("1_w27pp")
+
+[node name="Hold" type="Area2D" parent="."]
+
+[node name="Hold" type="CollisionShape2D" parent="Hold"]
+position = Vector2(1.90735e-05, 0)
+shape = SubResource("RectangleShape2D_j2o8c")

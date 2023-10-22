@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://c2qhwt3y0tum6"]
+
+[ext_resource type="Texture2D" uid="uid://dyxnuxlst4mxc" path="res://Assets/Image/Materials/White.png" id="1_ua8el"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7jiwh"]
+size = Vector2(32, 40)
+
+[node name="Determine_Line" type="Sprite2D"]
+scale = Vector2(100, 0.15)
+texture = ExtResource("1_ua8el")
+
+[node name="Determine_Line" type="Area2D" parent="."]
+
+[node name="Determine_Line" type="CollisionShape2D" parent="Determine_Line"]
+position = Vector2(-7.62939e-07, 1.19209e-06)
+shape = SubResource("RectangleShape2D_7jiwh")

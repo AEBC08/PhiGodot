@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bos0xyb1ruytk"]
+
+[ext_resource type="Texture2D" uid="uid://dyxnuxlst4mxc" path="res://Assets/Image/Materials/White.png" id="1_bbv4b"]
+
+[node name="MikuColor" type="Sprite2D"]
+modulate = Color(0.223529, 0.772549, 0.733333, 1)
+texture = ExtResource("1_bbv4b")

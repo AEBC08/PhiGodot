@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://q0ardap0o4oc"]
+
+[ext_resource type="Texture2D" uid="uid://d0u0mxo74neuc" path="res://Assets/Image/Materials/Tap.png" id="1_27hrs"]
+[ext_resource type="Script" path="res://Assets/Script/Tap.cs" id="2_bhw6w"]
+[ext_resource type="PackedScene" uid="uid://tla4ta022aiv" path="res://Assets/Scene/Animation.tscn" id="3_incce"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o8t3v"]
+size = Vector2(986.667, 106.667)
+
+[node name="Tap" type="Sprite2D" node_paths=PackedStringArray("Collision")]
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("1_27hrs")
+script = ExtResource("2_bhw6w")
+Collision = NodePath("Tap")
+Animation = ExtResource("3_incce")
+
+[node name="Tap" type="Area2D" parent="."]
+
+[node name="Tap" type="CollisionShape2D" parent="Tap"]
+position = Vector2(-2.22524e-05, 1.58946e-06)
+shape = SubResource("RectangleShape2D_o8t3v")

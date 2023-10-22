@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://dl78gct863tad"]
+
+[ext_resource type="Texture2D" uid="uid://bd1egl7ajtwcr" path="res://Assets/Image/Materials/Flick.png" id="1_vaewl"]
+[ext_resource type="Script" path="res://Assets/Script/Flick.cs" id="2_0samk"]
+[ext_resource type="PackedScene" uid="uid://tla4ta022aiv" path="res://Assets/Scene/Animation.tscn" id="3_sicgg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_048nk"]
+size = Vector2(986.667, 106.667)
+
+[node name="Flick" type="Sprite2D" node_paths=PackedStringArray("Collision")]
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("1_vaewl")
+script = ExtResource("2_0samk")
+Collision = NodePath("Flick")
+Animation = ExtResource("3_sicgg")
+
+[node name="Flick" type="Area2D" parent="."]
+
+[node name="Flick" type="CollisionShape2D" parent="Flick"]
+position = Vector2(-2.54313e-05, 0)
+shape = SubResource("RectangleShape2D_048nk")
