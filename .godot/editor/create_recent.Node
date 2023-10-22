@@ -1,0 +1,14 @@
+Sprite2D
+AudioStreamPlayer
+ProgressBar
+CollisionShape2D
+Area2D
+AnimatedSprite2D
+Button
+TextureButton
+VBoxContainer
+HBoxContainer
+Label
+MarginContainer
+Node2D
+TextureRect
