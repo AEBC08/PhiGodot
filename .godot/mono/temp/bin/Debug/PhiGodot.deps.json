@@ -1,0 +1,83 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "PhiGodot/1.0.0": {
+        "dependencies": {
+          "Godot.SourceGenerators": "4.2.0-dev.6",
+          "GodotSharp": "4.2.0-dev.6",
+          "GodotSharpEditor": "4.2.0-dev.6",
+          "Newtonsoft.Json": "12.0.0.0"
+        },
+        "runtime": {
+          "PhiGodot.dll": {}
+        }
+      },
+      "Godot.SourceGenerators/4.2.0-dev.6": {},
+      "GodotSharp/4.2.0-dev.6": {
+        "runtime": {
+          "lib/net6.0/GodotSharp.dll": {
+            "assemblyVersion": "4.2.0.0",
+            "fileVersion": "4.2.0.0"
+          }
+        }
+      },
+      "GodotSharpEditor/4.2.0-dev.6": {
+        "dependencies": {
+          "GodotSharp": "4.2.0-dev.6"
+        },
+        "runtime": {
+          "lib/net6.0/GodotSharpEditor.dll": {
+            "assemblyVersion": "4.2.0.0",
+            "fileVersion": "4.2.0.0"
+          }
+        }
+      },
+      "Newtonsoft.Json/12.0.0.0": {
+        "runtime": {
+          "Newtonsoft.Json.dll": {
+            "assemblyVersion": "12.0.0.0",
+            "fileVersion": "12.0.1.22727"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "PhiGodot/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Godot.SourceGenerators/4.2.0-dev.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-fwTMhzvKF+YZazOAaar2+ds5Z2Sg5bZ19GilA01SW6hDsju3iLGH3fJcOO/qI0OwlDAlGgicjqNGu9oHI0zQEw==",
+      "path": "godot.sourcegenerators/4.2.0-dev.6",
+      "hashPath": "godot.sourcegenerators.4.2.0-dev.6.nupkg.sha512"
+    },
+    "GodotSharp/4.2.0-dev.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-zO1T0f2pXITu6qgs2ZYAQ/bfofUkSm3Q88/k2L6YR6zkjXiUAeTYzO2arJCuaicEf86fxcDXiamYqSlc/XfRpw==",
+      "path": "godotsharp/4.2.0-dev.6",
+      "hashPath": "godotsharp.4.2.0-dev.6.nupkg.sha512"
+    },
+    "GodotSharpEditor/4.2.0-dev.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-FjKIxJna8c8nu6s/iGt7JTLixYkPx56kAaLBbyKlnsbVLiwEdVGgPQezKgCmklt3XFcm/gH+V28plvRx/rehtg==",
+      "path": "godotsharpeditor/4.2.0-dev.6",
+      "hashPath": "godotsharpeditor.4.2.0-dev.6.nupkg.sha512"
+    },
+    "Newtonsoft.Json/12.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

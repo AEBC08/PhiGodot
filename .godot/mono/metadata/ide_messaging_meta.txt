@@ -1,0 +1,2 @@
+﻿61495
+D:/Godot Engine/Godot_v4.2-dev6_mono_win64/Godot_v4.2-dev6_mono_win64.exe

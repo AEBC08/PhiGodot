@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "Zjlkm3iWL1jPuI6AKF4gcU5HjBixdPMvzVnyFrZKk1Jr3e/JfC1CmVHJV49yu1W1KvhZFO5pMhc3/+nD06dgTg==",
+  "success": true,
+  "projectFilePath": "D:\\Godot\\PhiGodot\\PhiGodot.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Admin\\.nuget\\packages\\godot.sourcegenerators\\4.2.0-dev.6\\godot.sourcegenerators.4.2.0-dev.6.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\godotsharp\\4.2.0-dev.6\\godotsharp.4.2.0-dev.6.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\godotsharpeditor\\4.2.0-dev.6\\godotsharpeditor.4.2.0-dev.6.nupkg.sha512"
+  ],
+  "logs": []
+}
