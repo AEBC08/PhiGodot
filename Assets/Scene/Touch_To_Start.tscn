@@ -1,0 +1,82 @@
+[gd_scene load_steps=5 format=3 uid="uid://b4rhcmstohavn"]
+
+[ext_resource type="FontFile" uid="uid://c8668gfxciipd" path="res://Assets/Font/Phigros.ttf" id="1_axsla"]
+[ext_resource type="Script" path="res://Assets/Script/Touch_To_Start.cs" id="1_catq2"]
+[ext_resource type="Script" path="res://Assets/Script/Start_Game.cs" id="2_741x2"]
+[ext_resource type="Script" path="res://Assets/Script/Start_Scene_Music.cs" id="2_gbrct"]
+
+[node name="Touch_To_Start" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_catq2")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Music" type="AudioStreamPlayer" parent="Background"]
+script = ExtResource("2_gbrct")
+
+[node name="UI" type="MarginContainer" parent="Background"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="UI_Down" type="VBoxContainer" parent="Background/UI"]
+layout_mode = 2
+alignment = 2
+
+[node name="UI_Down" type="MarginContainer" parent="Background/UI/UI_Down"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="UI_Left" type="HBoxContainer" parent="Background/UI/UI_Down/UI_Down"]
+layout_mode = 2
+
+[node name="UI_Down" type="VBoxContainer" parent="Background/UI/UI_Down/UI_Down/UI_Left"]
+layout_mode = 2
+
+[node name="Version" type="Label" parent="Background/UI/UI_Down/UI_Down/UI_Left/UI_Down"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_axsla")
+
+[node name="UI_Middle" type="HBoxContainer" parent="Background/UI"]
+layout_mode = 2
+alignment = 1
+
+[node name="UI_Middle" type="VBoxContainer" parent="Background/UI/UI_Middle"]
+layout_mode = 2
+theme_override_constants/separation = 100
+alignment = 1
+
+[node name="Game_Name" type="Label" parent="Background/UI/UI_Middle/UI_Middle"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_axsla")
+theme_override_font_sizes/font_size = 60
+text = "PhiGodot"
+horizontal_alignment = 1
+
+[node name="Prompt" type="Label" parent="Background/UI/UI_Middle/UI_Middle"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_axsla")
+theme_override_font_sizes/font_size = 30
+text = "点击开始游戏
+Touch to start"
+horizontal_alignment = 1
+
+[node name="Start_Game" type="TextureButton" parent="Background/UI"]
+layout_mode = 2
+script = ExtResource("2_741x2")

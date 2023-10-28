@@ -81,7 +81,7 @@ public partial class Game_Logic : Node
 		{
 			case 0:  // 设置背景图
 				{
-					GetNode<TextureRect>("Backgroun").Texture = (Texture2D)GD.Load<Texture>(Strings);
+					GetNode<TextureRect>("Background").Texture = (Texture2D)GD.Load<Texture>(Strings);
 					break;
 				}
 			case 1:  // 生成Tap
@@ -90,7 +90,7 @@ public partial class Game_Logic : Node
 					Node_Info.Position = new Vector2(X, Y - (Node_Info.Scale.Y * 53.34f));
 					var Set_Speed = (Tap)Node_Info;
 					Set_Speed.Speed = Speed;
-					GetNode("Backgroun/Game").CallDeferred("add_child", Node_Info);
+					GetNode("Background/Game").CallDeferred("add_child", Node_Info);
 					break;
 				}
 			case 2:  // 生成Drag
@@ -99,7 +99,7 @@ public partial class Game_Logic : Node
 					Node_Info.Position = new Vector2(X, Y - (Node_Info.Scale.Y * 33.34f));
 					var Set_Speed = (Drag)Node_Info;
 					Set_Speed.Speed = Speed;
-					GetNode("Backgroun/Game").CallDeferred("add_child", Node_Info);
+					GetNode("Background/Game").CallDeferred("add_child", Node_Info);
 					break;
 				}
 			case 3:  // 生成Flick
@@ -108,7 +108,7 @@ public partial class Game_Logic : Node
 					Node_Info.Position = new Vector2(X, Y - (Node_Info.Scale.Y * 53.34f));
 					var Set_Speed = (Flick)Node_Info;
 					Set_Speed.Speed = Speed;
-					GetNode("Backgroun/Game").CallDeferred("add_child", Node_Info);
+					GetNode("Background/Game").CallDeferred("add_child", Node_Info);
 					break;
 				}
 			case 4:  // 生成Hold
@@ -116,24 +116,24 @@ public partial class Game_Logic : Node
 					Node2D Node_Info = (Node2D)((PackedScene)ResourceLoader.Load("res://Assets/Scene/Hold.tscn")).Instantiate();
 					Node_Info.Scale = new Vector2(0.15f, Long);
 					Node_Info.Position = new Vector2(X, Y - (Long * 1000));
-					GetNode("Backgroun/Game").CallDeferred("add_child", Node_Info);
+					GetNode("Background/Game").CallDeferred("add_child", Node_Info);
 					break;
 				}
 			case 5:  // 生成判定线
 				{
 					Node2D Node_Info = (Node2D)((PackedScene)ResourceLoader.Load("res://Assets/Scene/Determine_Line.tscn")).Instantiate();
 					Node_Info.Position = new Vector2(X, Y);
-					GetNode("Backgroun/Game").CallDeferred("add_child", Node_Info);
+					GetNode("Background/Game").CallDeferred("add_child", Node_Info);
 					break;
 				}
 			case 6:  // 加载歌曲信息
 				{
-					GetNode<Label>("Backgroun/UI/UI_Down/UI_Down/UI_Left/UI_Down/Song").Text = Strings;
+					GetNode<Label>("Background/UI/UI_Down/UI_Down/UI_Left/UI_Down/Song").Text = Strings;
 					break;
 				}
 			case 7:  // 加载难度信息
 				{
-					GetNode<Label>("Backgroun/UI/UI_Down/UI_Down/UI_Right/UI_Down/Difficulty").Text = Strings;
+					GetNode<Label>("Background/UI/UI_Down/UI_Down/UI_Right/UI_Down/Difficulty").Text = Strings;
 					break;
 				}
 			case 8: // 加载模式
@@ -150,7 +150,7 @@ public partial class Game_Logic : Node
 				}
 			case 9:  // 加载音乐
 				{
-					GetNode<AudioStreamPlayer>("Backgroun/Game/Music").Stream = (AudioStream)GD.Load(Strings);
+					GetNode<AudioStreamPlayer>("Background/Game/Music").Stream = (AudioStream)GD.Load(Strings);
 					break;
 				}
 		}
@@ -245,10 +245,10 @@ public partial class Game_Logic : Node
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-		Points_Info = GetNode<Label>("Backgroun/UI/UI_Up/UI_Up/UI_Right/UI_Up/Points");
-		Mode_Info = GetNode<Label>("Backgroun/UI/UI_Up/UI_Up/UI_Middle/UI_Up/Mode");
-		Combo_Info = GetNode<Label>("Backgroun/UI/UI_Up/UI_Up/UI_Middle/UI_Up/Combo");
-		Load_Node(0, Strings: "res://Assets/Image/Song_Cover/Test.png");
+		Points_Info = GetNode<Label>("Background/UI/UI_Up/UI_Up/UI_Right/UI_Up/Points");
+		Mode_Info = GetNode<Label>("Background/UI/UI_Up/UI_Up/UI_Middle/UI_Up/Mode");
+		Combo_Info = GetNode<Label>("Background/UI/UI_Up/UI_Up/UI_Middle/UI_Up/Combo");
+		// Load_Node(0, Strings: "res://Assets/Image/Song_Cover/Test.png");
 		Load_Node(6, Strings: "测试");
 		Load_Node(7, Strings: "EZ Lv.-999");
 		Load_Node(8, Mode: 1);

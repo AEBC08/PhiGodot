@@ -17,7 +17,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_tgsq7")
 
-[node name="Backgroun" type="TextureRect" parent="."]
+[node name="Background" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -25,20 +25,20 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Game" type="Node2D" parent="Backgroun"]
+[node name="Game" type="Node2D" parent="Background"]
 
-[node name="Music" type="AudioStreamPlayer" parent="Backgroun/Game"]
+[node name="Music" type="AudioStreamPlayer" parent="Background/Game"]
 
-[node name="Tap_or_Hold" type="AudioStreamPlayer" parent="Backgroun/Game"]
+[node name="Tap_or_Hold" type="AudioStreamPlayer" parent="Background/Game"]
 stream = ExtResource("2_clytu")
 
-[node name="Drag" type="AudioStreamPlayer" parent="Backgroun/Game"]
+[node name="Drag" type="AudioStreamPlayer" parent="Background/Game"]
 stream = ExtResource("3_lavxw")
 
-[node name="Flick" type="AudioStreamPlayer" parent="Backgroun/Game"]
+[node name="Flick" type="AudioStreamPlayer" parent="Background/Game"]
 stream = ExtResource("4_wm3aq")
 
-[node name="UI" type="MarginContainer" parent="Backgroun"]
+[node name="UI" type="MarginContainer" parent="Background"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -46,94 +46,94 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="UI_Down" type="VBoxContainer" parent="Backgroun/UI"]
+[node name="UI_Down" type="VBoxContainer" parent="Background/UI"]
 layout_mode = 2
 alignment = 2
 
-[node name="UI_Down" type="MarginContainer" parent="Backgroun/UI/UI_Down"]
+[node name="UI_Down" type="MarginContainer" parent="Background/UI/UI_Down"]
 layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="UI_Right" type="HBoxContainer" parent="Backgroun/UI/UI_Down/UI_Down"]
+[node name="UI_Right" type="HBoxContainer" parent="Background/UI/UI_Down/UI_Down"]
 layout_mode = 2
 alignment = 2
 
-[node name="UI_Down" type="VBoxContainer" parent="Backgroun/UI/UI_Down/UI_Down/UI_Right"]
+[node name="UI_Down" type="VBoxContainer" parent="Background/UI/UI_Down/UI_Down/UI_Right"]
 layout_mode = 2
 alignment = 2
 
-[node name="Difficulty" type="Label" parent="Backgroun/UI/UI_Down/UI_Down/UI_Right/UI_Down"]
+[node name="Difficulty" type="Label" parent="Background/UI/UI_Down/UI_Down/UI_Right/UI_Down"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_vlqfs")
 theme_override_font_sizes/font_size = 20
 horizontal_alignment = 2
 
-[node name="UI_Left" type="HBoxContainer" parent="Backgroun/UI/UI_Down/UI_Down"]
+[node name="UI_Left" type="HBoxContainer" parent="Background/UI/UI_Down/UI_Down"]
 layout_mode = 2
 
-[node name="UI_Down" type="VBoxContainer" parent="Backgroun/UI/UI_Down/UI_Down/UI_Left"]
+[node name="UI_Down" type="VBoxContainer" parent="Background/UI/UI_Down/UI_Down/UI_Left"]
 layout_mode = 2
 
-[node name="Song" type="Label" parent="Backgroun/UI/UI_Down/UI_Down/UI_Left/UI_Down"]
+[node name="Song" type="Label" parent="Background/UI/UI_Down/UI_Down/UI_Left/UI_Down"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_vlqfs")
 theme_override_font_sizes/font_size = 20
 
-[node name="UI_Up" type="VBoxContainer" parent="Backgroun/UI"]
+[node name="UI_Up" type="VBoxContainer" parent="Background/UI"]
 layout_mode = 2
 
-[node name="Progress" type="ProgressBar" parent="Backgroun/UI/UI_Up"]
+[node name="Progress" type="ProgressBar" parent="Background/UI/UI_Up"]
 layout_mode = 2
 value = 25.0
 show_percentage = false
 
-[node name="UI_Up" type="MarginContainer" parent="Backgroun/UI/UI_Up"]
+[node name="UI_Up" type="MarginContainer" parent="Background/UI/UI_Up"]
 layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_right = 10
 
-[node name="UI_Right" type="HBoxContainer" parent="Backgroun/UI/UI_Up/UI_Up"]
+[node name="UI_Right" type="HBoxContainer" parent="Background/UI/UI_Up/UI_Up"]
 layout_mode = 2
 alignment = 2
 
-[node name="UI_Up" type="VBoxContainer" parent="Backgroun/UI/UI_Up/UI_Up/UI_Right"]
+[node name="UI_Up" type="VBoxContainer" parent="Background/UI/UI_Up/UI_Up/UI_Right"]
 layout_mode = 2
 
-[node name="Points" type="Label" parent="Backgroun/UI/UI_Up/UI_Up/UI_Right/UI_Up"]
+[node name="Points" type="Label" parent="Background/UI/UI_Up/UI_Up/UI_Right/UI_Up"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_vlqfs")
 theme_override_font_sizes/font_size = 25
 horizontal_alignment = 2
 
-[node name="UI_Middle" type="HBoxContainer" parent="Backgroun/UI/UI_Up/UI_Up"]
+[node name="UI_Middle" type="HBoxContainer" parent="Background/UI/UI_Up/UI_Up"]
 layout_mode = 2
 alignment = 1
 
-[node name="UI_Up" type="VBoxContainer" parent="Backgroun/UI/UI_Up/UI_Up/UI_Middle"]
+[node name="UI_Up" type="VBoxContainer" parent="Background/UI/UI_Up/UI_Up/UI_Middle"]
 layout_mode = 2
 theme_override_constants/separation = -5
 
-[node name="Combo" type="Label" parent="Backgroun/UI/UI_Up/UI_Up/UI_Middle/UI_Up"]
+[node name="Combo" type="Label" parent="Background/UI/UI_Up/UI_Up/UI_Middle/UI_Up"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_vlqfs")
 theme_override_font_sizes/font_size = 30
 horizontal_alignment = 1
 
-[node name="Mode" type="Label" parent="Backgroun/UI/UI_Up/UI_Up/UI_Middle/UI_Up"]
+[node name="Mode" type="Label" parent="Background/UI/UI_Up/UI_Up/UI_Middle/UI_Up"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_vlqfs")
 theme_override_font_sizes/font_size = 20
 horizontal_alignment = 1
 
-[node name="UI_Left" type="HBoxContainer" parent="Backgroun/UI/UI_Up/UI_Up"]
+[node name="UI_Left" type="HBoxContainer" parent="Background/UI/UI_Up/UI_Up"]
 layout_mode = 2
 
-[node name="UI_Up" type="VBoxContainer" parent="Backgroun/UI/UI_Up/UI_Up/UI_Left"]
+[node name="UI_Up" type="VBoxContainer" parent="Background/UI/UI_Up/UI_Up/UI_Left"]
 layout_mode = 2
 
-[node name="Suspend" type="TextureButton" parent="Backgroun/UI/UI_Up/UI_Up/UI_Left/UI_Up"]
+[node name="Suspend" type="TextureButton" parent="Background/UI/UI_Up/UI_Up/UI_Left/UI_Up"]
 layout_mode = 2
 texture_normal = ExtResource("2_sva1u")
 script = ExtResource("4_3hjki")
