@@ -4,7 +4,8 @@ PhiGodot，船新的Phigros模拟器，开源，任何有能力的人都可以�
 ## 关于PhiGodot的开发
 由于我没有什么时间去开发，一星期只有1~2天的时间，有时候还说不定，假期是肯定有时间的。有能力的可以来参与开发，让PhiGodot变得更好
 ## 关于开源
-如果你克隆了这个项目，那么就默认你接受了**GPLv3**协议和开发规则(下方的使用规则)
+如果你克隆了这个项目，那么就默认你接受了**GPLv3**协议和开发规则(下方的使用规则)  
+无论如何也不能失去了崇高的开源精神
 ## 关于项目
 这里是[main](https://github.com/AEBC08/PhiGodot/tree/main)分支，由[@AEBC08](https://github.com/AEBC08)维护  
 子分支[chicken](https://github.com/AEBC08/PhiGodot/tree/chicken)分支，由[@ChickenPige0n](https://github.com/ChickenPige0n)主要维护  
