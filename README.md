@@ -1,6 +1,6 @@
 ![image](https://github.com/AEBC08/PhiGodot/blob/main/PhiGodot.png)
 # PhiGodot
-PhiGodot，船新的Phigros模拟器，开源，任何有能力的人都可以参与开发，QQ群：934081816
+PhiGodot，船新的Phigros模拟器，现已停止开发，就当看个乐子
 ## 关于PhiGodot的开发
 由于我没有什么时间去开发，一星期只有1~2天的时间，有时候还说不定，假期是肯定有时间的。有能力的可以来参与开发，让PhiGodot变得更好
 ## 关于开源
